@@ -31,3 +31,11 @@ const task4Result = (animals) => {
 };
 
 console.log(task4Result(data));
+
+const task5Result = (number, n) => {
+    const result = number;
+    // your code here
+    return result;
+};
+
+console.log(task5Result(3, 4));
