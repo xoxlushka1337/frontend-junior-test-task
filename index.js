@@ -82,15 +82,33 @@ const task13Result = animals => {
 	return result;
 };
 
-console.log(task13Result(data));
+// console.log(task13Result(data));
 
-// const task14Result = animals => {
-// 	const result = [];
-// 	// your code here
-// 	return result;
-// };
+const task14Result = animals => {
+	const result = [];
+	// your code here
+	let ageSortCats = [];
+	let ageSortDogs = [];
 
-// console.log(task14Result(data));
+	for (let i = 0; i < animals.length; i++) {
+		if (animals[i].type === "cat") {
+			ageSortCats.push(animals[i]);
+		}
+		if (animals[i].type === "dog") {
+			ageSortDogs.push(animals[i]);
+		}
+	}
+
+	ageSortCats.sort((a, b) => b.age - a.age);
+
+	ageSortDogs.sort((a, b) => a.age - b.age);
+
+	result.push(...ageSortCats, ...ageSortDogs);
+
+	return result;
+};
+
+console.log(task14Result(data));
 
 // const myPowFunc = (number, n) => {
 // 	const result = number;
