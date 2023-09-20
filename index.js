@@ -34,7 +34,7 @@ const task11Result = animals => {
 	return result;
 };
 
-// console.log(task11Result(data));
+console.log(task11Result(data));
 
 const task12Result = animals => {
 	let result = 0;
@@ -54,7 +54,7 @@ const task12Result = animals => {
 	return result;
 };
 
-// console.log(task12Result(data));
+console.log(task12Result(data));
 
 const task13Result = animals => {
 	const result = [];
@@ -82,7 +82,7 @@ const task13Result = animals => {
 	return result;
 };
 
-// console.log(task13Result(data));
+console.log(task13Result(data));
 
 const task14Result = animals => {
 	const result = [];
@@ -108,7 +108,7 @@ const task14Result = animals => {
 	return result;
 };
 
-// console.log(task14Result(data));
+console.log(task14Result(data));
 
 const myPowFunc = (number, n) => {
 	let result = number;
@@ -128,7 +128,7 @@ const myPowFunc = (number, n) => {
 	return result;
 };
 
-// console.log(myPowFunc(3, 4));
+console.log(myPowFunc(3, 4));
 
 const myFlatFunc = inputArray => {
 	const result = inputArray;
