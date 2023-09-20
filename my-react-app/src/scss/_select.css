@@ -1,0 +1,48 @@
+.select {
+	position: relative;
+	width: 240px;
+}
+.select__input {
+	font-size: 15px;
+	height: 40px;
+	width: 100%;
+	padding: 0 5px;
+	border: 1.5px solid rgb(167, 167, 242);
+	border-radius: 5px;
+
+	box-sizing: border-box;
+}
+
+.select__input:focus {
+	border: 1.5px solid rgb(60, 60, 213);
+	outline: none;
+}
+
+.select__dropdown {
+	display: none;
+	position: absolute;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #ccc;
+	max-height: 200px;
+	overflow-y: auto;
+	width: 100%;
+
+	background-color: #ffffff;
+}
+
+.select__dropdown.open {
+	display: block;
+}
+
+.select__list {
+	padding: 4px;
+	cursor: pointer;
+
+	box-sizing: border-box;
+}
+
+.select__list:hover {
+	background-color: #f0f0f0;
+}
