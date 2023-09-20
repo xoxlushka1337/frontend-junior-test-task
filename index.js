@@ -34,15 +34,27 @@ const task11Result = animals => {
 	return result;
 };
 
-console.log(task11Result(data));
+// console.log(task11Result(data));
 
-// const task12Result = animals => {
-// 	const result = 0;
-// 	// your code here
-// 	return result;
-// };
+const task12Result = animals => {
+	let result = 0;
 
-// console.log(task12Result(data));
+	// your code here
+	for (let i = 0; i < animals.length; i++) {
+		if (
+			animals[i].type === "dog" &&
+			animals[i].features &&
+			animals[i].features.includes("black") &&
+			animals[i].breed === true
+		) {
+			result++;
+		}
+	}
+
+	return result;
+};
+
+console.log(task12Result(data));
 
 // const task13Result = animals => {
 // 	const result = [];
