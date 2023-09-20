@@ -128,13 +128,22 @@ const myPowFunc = (number, n) => {
 	return result;
 };
 
-console.log(myPowFunc(3, 4));
+// console.log(myPowFunc(3, 4));
 
-// const myFlatFunc = inputArray => {
-// 	const result = inputArray;
-// 	// your code here
-// 	return result;
-// };
+const myFlatFunc = inputArray => {
+	const result = inputArray;
+	// your code here
 
-// console.log(myFlatFunc([1, 3, 5, [1, [4, 5], "asdf", [76, [56, [66, 59]]]]]));
+	for (let i = 0; i < result.length; i++) {
+		if (Array.isArray(result[i])) {
+			const flat = myFlatFunc(result[i]);
+			result.splice(i, 1);
+			result.splice(i, 0, ...flat);
+		}
+	}
+
+	return result;
+};
+
+console.log(myFlatFunc([1, 3, 5, [1, [4, 5], "asdf", [76, [56, [66, 59]]]]]));
 // result 1, 3, 5, 1, 4, 5, 'asdf', 76, 56, 66, 59
