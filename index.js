@@ -54,15 +54,35 @@ const task12Result = animals => {
 	return result;
 };
 
-console.log(task12Result(data));
+// console.log(task12Result(data));
 
-// const task13Result = animals => {
-// 	const result = [];
-// 	// your code here
-// 	return result;
-// };
+const task13Result = animals => {
+	const result = [];
+	// your code here
 
-// console.log(task13Result(data));
+	for (let i = 0; i < animals.length; i++) {
+		if (
+			animals[i].type === "cat" &&
+			animals[i].features &&
+			animals[i].features.includes("black") &&
+			animals[i].breed === true
+		) {
+			result.push(animals[i]);
+		}
+
+		if (
+			animals[i].type === "dog" &&
+			animals[i].features &&
+			animals[i].features.includes("white") &&
+			animals[i].breed === true
+		) {
+			result.push(animals[i]);
+		}
+	}
+	return result;
+};
+
+console.log(task13Result(data));
 
 // const task14Result = animals => {
 // 	const result = [];
