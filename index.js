@@ -108,15 +108,27 @@ const task14Result = animals => {
 	return result;
 };
 
-console.log(task14Result(data));
+// console.log(task14Result(data));
 
-// const myPowFunc = (number, n) => {
-// 	const result = number;
-// 	// your code here
-// 	return result;
-// };
+const myPowFunc = (number, n) => {
+	let result = number;
+	// your code here
 
-// console.log(myPowFunc(3, 4));
+	if (n === 0) {
+		return 1;
+	} else if (n < 0) {
+		number = 1 / number;
+		n = -n;
+	}
+
+	for (let i = 1; i < n; i++) {
+		result *= number;
+	}
+
+	return result;
+};
+
+console.log(myPowFunc(3, 4));
 
 // const myFlatFunc = inputArray => {
 // 	const result = inputArray;
